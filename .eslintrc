@@ -1,0 +1,28 @@
+{
+    "extends": "airbnb",
+    "env": {
+        "node": true,
+        "mocha": true,
+        "es6": true
+    },
+    "rules": {
+        // disable requiring trailing commas
+        "indent": ["error", 4],
+        "comma-dangle": 0,
+        "max-len": [
+            "error",
+            {
+                "code": 140,
+                "ignoreComments": true,
+                "ignoreUrls": true,
+                "ignoreStrings": true
+            }
+        ],
+        "no-unused-vars": ["error", { "argsIgnorePattern": "next" }]
+    },
+    "settings": {
+        "react": {
+            "version": "latest"
+        }
+    }
+}

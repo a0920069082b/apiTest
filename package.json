@@ -1,0 +1,32 @@
+{
+    "name": "apitest",
+    "version": "1.0.0",
+    "description": "apitest",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "eslint": "./node_modules/eslint/bin/eslint.js --max-warnings 0 --ext .js .",
+        "build": "babel src -d es5",
+        "start": "npx nodemon --exec babel-node --max_old_space_size=16384 ./src/www.js",
+        "start:es5": "npm run-script build && node ./es5/www.js"
+    },
+    "author": "chou",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/cli": "^7.20.7",
+        "@babel/core": "^7.20.12",
+        "@babel/node": "^7.20.7",
+        "@babel/plugin-proposal-class-properties": "^7.18.6",
+        "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
+        "@babel/plugin-transform-runtime": "^7.19.6",
+        "@babel/preset-env": "^7.20.2",
+        "@babel/register": "^7.18.9",
+        "@babel/runtime": "^7.20.13",
+        "nodemon": "^2.0.20"
+    },
+    "dependencies": {
+        "dotenv": "^16.0.3",
+        "lodash": "^4.17.21",
+        "moment": "^2.29.4"
+    }
+}
